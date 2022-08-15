@@ -1,4 +1,5 @@
-
+Forum is an application that allows its users to register and log-in on a web portal.
+Users can exchange posts and comments, and like/dislike posts and comments.
 Each post is associated with up to four categories: sport, current affairs, travel, hobby.
 Posts can be filtered by category and by liked posts.
 
