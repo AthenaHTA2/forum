@@ -24,6 +24,4 @@ Alternatively type "bash script.sh" in VSC terminal and press "y" when prompted.
 
 To exit Docker type "exit" or <ctrl-D> in VSC terminal.
 
-This application is deployed on:
-https://damp-sands-54043.herokuapp.com/
-
+Forum application is deployed on: https://damp-sands-54043.herokuapp.com/  and on: https://forum-helena.herokuapp.com/
