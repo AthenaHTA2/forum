@@ -18,7 +18,8 @@ func main() {
 	http.Handle("/css/", http.StripPrefix("/css/", path))*/
 	path2 := http.FileServer(http.Dir("static")) //to handle the assets folder
 	http.Handle("/static/", http.StripPrefix("/static/", path2))
-	//port := os.Getenv("PORT")
+	//To deploy on Heroku, import "os" package and uncomment below:
+	// port := os.Getenv("PORT")
 	// fmt.Println("forum starts")
 	http.HandleFunc("/", handlers.IndexHandler)
 	http.HandleFunc("/login", handlers.LoginHandler)
@@ -32,9 +33,9 @@ func main() {
 	http.HandleFunc("/post", handlers.PostView)
 	http.HandleFunc("/rate", handlers.LikeDislikeHandler)
 
-	//deployment on Heroku:
-	//fmt.Println("Listening on:" + port)
-	//log.Fatal(http.ListenAndServe(":" +port, nil))
+	//To deploy on Heroku uncomment below two lines:
+	// fmt.Println("Listening on:" + port)
+	// log.Fatal(http.ListenAndServe(":" +port, nil))
 	fmt.Println("Server started at port 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
